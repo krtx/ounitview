@@ -4,8 +4,7 @@ require 'sinatra'
 require 'sinatra/reloader' if development?
 require 'pp'
 
-@@test_bin = "/home/minoru/projects/le4a/ml/test.byte"
-# @@test_bin = "/home/minoru/misc/ocaml/test"
+@@test_bin = "path/to/oUnit/test/binary/file"
 @@result = {"ok" => :success, "FAIL" => :failure, "ERROR" => :error, "SKIP" => :skip, "TODO" => :todo}
 @@tests = []
 
