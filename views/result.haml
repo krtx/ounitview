@@ -1,0 +1,36 @@
+%h1= 'Status'
+
+%div#status= @result[:status]
+
+%h1= 'Result'
+
+%p
+  %label.checkbox
+    %input(type="checkbox" id="toggle")
+    ='hide passed tests'
+
+.container
+
+  %div#result.span6
+
+    - @result[:test].each do |k, v|
+
+      %div(class="test well row-fluid #{v[0]}")
+
+        %div.path
+          - case v[0]
+          - when :success
+            %i.icon-ok
+          - when :failure
+            %i.icon-remove
+          - when :error
+            %i.icon-warning-sign
+          - when :skip
+            %i.icon-minus
+          - when :todo
+            %i.icon-plus-sign
+          = k
+
+        - if v.length == 2 then
+          %div(class="message well")= v[1]
+

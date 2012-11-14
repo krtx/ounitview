@@ -1,0 +1,10 @@
+%p test list
+
+#items
+  - @list.each do |test|
+    .test
+      = test
+
+%form{:method => "POST", :action => "/"}
+  %input.btn{:type => "submit", :value => "run test"}
+

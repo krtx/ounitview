@@ -1,0 +1,5 @@
+%h1= 'List'
+
+%form{:method => "GET", :action => "/"}
+  %input.btn{:type => "submit", :value => "run test"}
+  = list_tag(@list)

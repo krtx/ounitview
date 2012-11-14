@@ -1,0 +1,57 @@
+.test {
+    margin: 0px;
+    padding: 4px;
+}
+
+#list {
+    font-size: small;
+}
+
+#list-tree .node-path {
+    font-weight: bold;
+    cursor: pointer;    
+}
+
+#list-tree .path-list {
+//    display: none;
+}
+
+.test.success {
+    background-color: lightsteelblue;
+}
+
+.test.failure {
+    background-color: tomato;
+}
+
+.test.error {
+    background-color: yellow;
+}
+
+.test.skip {
+    background-color: steelblue;
+    display: none;
+}
+
+.test.todo {
+    background-color: orange;
+}
+
+.path {
+    font-weight: bold;
+}
+
+.message {
+    padding: 2px;
+    margin: 2px 0px 2px 0px;
+    font-family: serif;
+}
+
+.failure .message {
+    background-color: snow;
+}
+
+.error .message {
+    background-color: lemonchiffon;
+}
+
