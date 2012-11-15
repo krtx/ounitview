@@ -4,7 +4,7 @@ require 'sinatra'
 require 'sinatra/reloader' if development?
 require 'pp'
 
-@@test_bin = "path/to/oUnit/test/binary/file"
+@@test_bin = "/home/minoru/projects/le4a/ml/test.byte"
 @@result = {"ok" => :success, "FAIL" => :failure, "ERROR" => :error, "SKIP" => :skip, "TODO" => :todo}
 @@tests = []
 
@@ -57,7 +57,6 @@ helpers do
       return if node.leaf?
       
       haml_tag("ul.path-list", {:style => @@tests.select{|x| x =~ /^#{val}.+/}.length > 0 ? "" : "display:none;"}) do
-      #haml_tag("ul.path-list") do
         node.children.each_with_index do |node, idx|
           haml_concat node_tag(node, val + ":#{idx}")
         end
